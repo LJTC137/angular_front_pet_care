@@ -1,0 +1,70 @@
+<div class="container-fluid mt-4 p-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-5 col-lg-5">
+      <div class="image p-5">
+        <div
+          class="col-12 col-md-12 col-lg-12 my-3 d-flex justify-content-center"
+        >
+          <img
+            src="./../../../assets/images/login/login2.png"
+            class="photo text-center"
+            alt="img"
+            width="70%"
+          />
+        </div>
+        <p class="text-center mt-3">
+          "Paseos felices y colas meneándose. Brindamos aventuras seguras para
+          tus adorables compañeros peludos".
+        </p>
+      </div>
+    </div>
+    <hr class="my-3 d-md-none" />
+    <div class="col-12 col-md-5 col-lg-5 ms-4">
+      <div class="login">
+        <form class="p-5">
+          <h2>Login</h2>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo Electrónico</label>
+            <input
+              type="email"
+              class="form-control"
+              id="correo"
+              name="correo"
+              [(ngModel)]="usuario.correo"
+              aria-describedby="emailHelp"
+              placeholder="username@mail.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="contraseña" class="form-label">Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              id="contrasenia"
+              name="contrasenia"
+              [(ngModel)]="usuario.contrasenia"
+              placeholder="Contraseña"
+            />
+          </div>
+          <div class="mb-3 text-center">
+            <button type="submit" class="btn px-5"  (click)="onLogin(usuario)">Iniciar Sesión</button>
+          </div>
+          <div class="text-center mt-3">
+            <a
+              [routerLink]="'/auth/registerOwner'"
+              class="link-primary text-black text-decoration-none"
+              >Regístrate aquí como Propietario</a
+            >
+          </div>
+          <div class="text-center mt-3">
+            <a
+              [routerLink]="'/auth/registerCarer'"
+              class="link-primary text-black text-decoration-none"
+              >Regístrate aquí como Cuidador</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

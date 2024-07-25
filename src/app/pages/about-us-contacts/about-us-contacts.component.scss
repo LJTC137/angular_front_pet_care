@@ -1,0 +1,48 @@
+.nosotros img {
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #F19A56; 
+    border-radius: 20px;
+}
+
+.nosotros img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+.about {
+    background-color: #F19A56;
+    border-radius: 70px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.about img {
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.about img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.about-2 {
+    border-radius: 70px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.about-2 img {
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.about-2 img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.circle {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card{
+    background-color: #FCA04B4D;
+}

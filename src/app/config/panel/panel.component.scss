@@ -1,0 +1,19 @@
+.background-image-container {
+    background-image: url('../../../assets/fondo-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    padding: 20px;
+}
+
+.card.hover-effect {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: solid 1px #ec7519;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card.hover-effect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

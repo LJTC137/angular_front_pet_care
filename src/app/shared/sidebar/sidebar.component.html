@@ -1,0 +1,113 @@
+<!-- Sidebar -->
+<nav class="col-md-3 d-none d-md-block sidebar">
+  <ul class="nav flex-column">
+    <h3 class="text-center">DogoFresh</h3>
+    <div class="back" *ngIf="isPropietario == true">
+      <li class="nav-item">
+        <a [routerLink]="'/config/registerPets'" class="nav-link"
+          >Registrar Mascotas</a
+        >
+      </li>
+    </div>
+    <div class="back" *ngIf="isLogged == true">
+      <li class="nav-item">
+        <a [routerLink]="'/config/registerAddress'" class="nav-link"
+          >Registrar Direcciones</a
+        >
+      </li>
+    </div>
+    <div class="back" *ngIf="isLogged == true">
+      <li class="nav-item">
+        <a routerLink="/config/profile" class="nav-link">Perfil</a>
+      </li>
+    </div>
+    <div class="back" *ngIf="isPropietario == true">
+      <li class="nav-item">
+        <a [routerLink]="'/config/registerRequest'" class="nav-link"
+          >Registrar solicitud de cuidado</a
+        >
+      </li>
+    </div>
+    <div class="back" *ngIf="isCuidador == true">
+      <li class="nav-item">
+        <a [routerLink]="'/config/careList'" class="nav-link"
+          >Listado de solicitudes de cuidado</a
+        >
+      </li>
+    </div>
+    <div class="back" *ngIf="isPropietario == true">
+      <li class="nav-item">
+        <a [routerLink]="'/config/myCareList'" class="nav-link"
+          >Mis solicitudes</a
+        >
+      </li>
+    </div>
+    <div class="back" *ngIf="isAdmin == true">
+      <li class="nav-item">
+        <a [routerLink]="'/config/categories'" class="nav-link"
+          >Registrar catalogos</a
+        >
+      </li>
+    </div>
+    <div class="back mt-3">
+      <li class="nav-item">
+        <a [routerLink]="'/config/panel'" class="nav-link">Volver Dashboard</a>
+      </li>
+    </div>
+  </ul>
+</nav>
+
+<!-- Menu hamburguesa para pantallas pequeñas -->
+<nav class="navbar navbar-expand-md d-block d-md-none">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" *ngIf="isPropietario == true">
+        <a [routerLink]="'/config/registerPets'" class="nav-link"
+          >Registrar Mascotas</a
+        >
+      </li>
+      <li class="nav-item" *ngIf="isLogged == true">
+        <a [routerLink]="'/config/registerAddress'" class="nav-link"
+          >Registrar Direcciones</a
+        >
+      </li>
+      <li class="nav-item" *ngIf="isLogged == true">
+        <a routerLink="/config/profile" class="nav-link">Perfil</a>
+      </li>
+      <li class="nav-item" *ngIf="isPropietario == true">
+        <a [routerLink]="'/config/registerRequest'" class="nav-link"
+          >Registrar solicitud de cuidado</a
+        >
+      </li>
+      <li class="nav-item" *ngIf="isCuidador == true">
+        <a [routerLink]="'/config/careList'" class="nav-link"
+          >Listado de solicitudes de cuidado</a
+        >
+      </li>
+      <li class="nav-item" *ngIf="isPropietario == true">
+        <a [routerLink]="'/config/myCareList'" class="nav-link"
+          >Mis solicitudes</a
+        >
+      </li>
+      <li class="nav-item" *ngIf="isAdmin == true">
+        <a [routerLink]="'/config/categories'" class="nav-link"
+          >Registrar catalogos</a
+        >
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="'/config/panel'" class="nav-link">Volver Dashboard</a>
+      </li>
+    </ul>
+  </div>
+</nav>

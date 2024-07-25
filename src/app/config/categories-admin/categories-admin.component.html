@@ -1,0 +1,157 @@
+<div class="container-fluid my-5">
+  <div class="row">
+    <!-- En esta columna se llama al sidebar que esta en shared -->
+    <div class="col-md-2">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-10 main-content">
+      <div class="row justify-content-center">
+        <div class="col-10 col-md-8 col-lg-8">
+          <h2 class="text-center mb-4">Categorias</h2>
+          <form>
+            <div class="row mb-3">
+              <div class="col-12 col-md-6 col-lg-6">
+                <label for="nombreCatalogo" class="form-label"
+                  >Nombre del catalogo</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombreCatalogo"
+                  name="nombreCatalogo"
+                  [(ngModel)]="catalogo.nombreCatalogo"
+                  required
+                />
+              </div>
+              <div class="col-12 col-md-6 col-lg-6">
+                <label for="valor" class="form-label">Valor</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="valor"
+                  name="valor"
+                  [(ngModel)]="catalogo.valor"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="estado"
+                    name="estado"
+                    [(ngModel)]="catalogo.estado"
+                  />
+                  <label class="form-check-label" for="estado">
+                    Estado
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="my-5 col-lg-3">
+                <button
+                  type="submit"
+                  class="btn btn-primary px-5"
+                  (click)="isEditing ? updateCatalogo() : saveCatalogo()"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                    />
+                  </svg>
+                  {{ isEditing ? "Editar" : "Agregar" }}
+                </button>
+              </div>
+
+              <div class="my-5 col-lg-3">
+                <button
+                  type="submit"
+                  class="btn btn-outline-danger px-5"
+                  (click)="deleteCatalogo()"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-trash3"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"
+                    />
+                  </svg>
+                  Borrar
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col">
+              <div class="table-responsive">
+                <table class="table table1">
+                  <thead>
+                    <h3 class="text-start p-2">Catalogos</h3>
+                    <tr>
+                      <th class="table1">Nombre catalogo</th>
+                      <th class="table1">Valor</th>
+                      <th class="table1">Estado</th>
+                      <th class="table1">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let catalogo of catalogoList; let i = index">
+                      <td class="align-middle">
+                        {{ catalogo.nombreCatalogo }}
+                      </td>
+                      <td class="align-middle">
+                        {{ catalogo.valor }}
+                      </td>
+                      <td class="align-middle">
+                        {{ catalogo.estado ? "Activo" : "Inactivo" }}
+                      </td>
+                      <td class="align-middle">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <button
+                              type="button"
+                              class="btn btn-outline-danger"
+                              (click)="deleteCatalogoFromList(catalogo.id)"
+                            >
+                              Eliminar
+                            </button>
+                          </div>
+                          <div class="col-lg-4">
+                            <button
+                              type="button"
+                              class="btn btn-outline-warning"
+                              (click)="selectCatalogo(i, catalogo)"
+                            >
+                              Editar
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

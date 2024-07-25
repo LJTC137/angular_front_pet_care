@@ -1,0 +1,143 @@
+<div class="background-image-container">
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <h1 class="text-center mb-3">Panel de Usuario</h1>
+    </div>
+    <!-- ============================== Registrar direcciones ============================== -->
+    <div class="row justify-content-center">
+      <div class="col-12 justify-content-end text-end">
+        <button type="button" class="btn btn-primary" (click)="logOut()">
+          Log Out
+        </button>
+      </div>
+      <div class="col-10 col-md-4 col-lg-3 mb-4" *ngIf="isLogged == true">
+        <div class="card hover-effect" [routerLink]="'/config/registerAddress'">
+          <div class="card-body h-100 p-3">
+            <div class="text-center">
+              <img
+                src="../../../assets/icons/register-address.svg"
+                alt="address"
+                width="30%"
+              />
+            </div>
+            <h5 class="card-title text-center">Registro Direcciones</h5>
+          </div>
+        </div>
+      </div>
+      <!-- ============================== Registrar usuarios ============================== -->
+      <div class="col-10 col-md-4 col-lg-3 mb-4" *ngIf="isAdmin == true">
+        <div
+          class="card hover-effect"
+          [routerLink]="'/config/userAdministrator'"
+        >
+          <div class="card-body h-100 p-3">
+            <div class="text-center">
+              <img
+                src="../../../assets/icons/user-admin.svg"
+                alt="admin"
+                width="30%"
+              />
+            </div>
+            <h5 class="card-title text-center">Administrador de Usuarios</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- ============================== Perfil ============================== -->
+      <div class="col-10 col-md-4 col-lg-3 mb-4" *ngIf="isLogged == true">
+        <div class="card hover-effect" [routerLink]="'/config/profile'">
+          <div class="card-body h-100 p-3">
+            <div class="text-center">
+              <img
+                src="../../../assets/icons/profile.svg"
+                alt="profile"
+                width="30%"
+              />
+            </div>
+            <h5 class="card-title text-center">Perfil</h5>
+          </div>
+        </div>
+      </div>
+      <!-- ============================== Listado de solicitudes ============================== -->
+      <div class="col-10 col-md-4 col-lg-3 mb-4" *ngIf="isCuidador == true">
+        <div class="card hover-effect" [routerLink]="'/config/careList'">
+          <div class="card-body h-100 p-3">
+            <div class="text-center">
+              <img
+                src="../../../assets/icons/list-register.svg"
+                alt="list"
+                width="30%"
+              />
+            </div>
+            <h5 class="card-title text-center">
+              Listado de solicitudes de cuidado
+            </h5>
+          </div>
+        </div>
+      </div>
+      <!-- ============================== Mi listado de solicitudes ============================== -->
+      <div class="col-10 col-md-4 col-lg-3 mb-4" *ngIf="isPropietario == true">
+        <div class="card hover-effect" [routerLink]="'/config/myCareList'">
+          <div class="card-body h-100 p-3">
+            <div class="text-center">
+              <img
+                src="../../../assets/icons/list-register.svg"
+                alt="list"
+                width="30%"
+              />
+            </div>
+            <h5 class="card-title text-center">Mis solicitudes</h5>
+          </div>
+        </div>
+      </div>
+      <!-- ============================== Registrar solicitud ============================== -->
+      <div class="col-10 col-md-4 col-lg-3 mb-4" *ngIf="isPropietario == true">
+        <div class="card hover-effect" [routerLink]="'/config/registerRequest'">
+          <div class="card-body h-100 p-3">
+            <div class="text-center">
+              <img
+                src="../../../assets/icons/register-care.svg"
+                alt="register"
+                width="27%"
+              />
+            </div>
+            <h5 class="card-title text-center">Registro Solicitud Cuidado</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- ============================== Registrar mascotas ============================== -->
+      <div class="col-10 col-md-4 col-lg-3 mb-4" *ngIf="isPropietario == true">
+        <div class="card hover-effect" [routerLink]="'/config/registerPets'">
+          <div class="card-body h-100 p-3">
+            <div class="text-center">
+              <img
+                src="../../../assets/icons/register-pet.svg"
+                alt="pets"
+                width="30%"
+              />
+            </div>
+            <h5 class="card-title text-center">Registro Mascotas</h5>
+          </div>
+        </div>
+      </div>
+      <!-- ============================== registrar categorias ============================== -->
+      <div class="col-10 col-md-4 col-lg-3 mb-4" *ngIf="isAdmin == true">
+        <div class="card hover-effect" [routerLink]="'/config/categories'">
+          <div class="card-body h-100 p-3">
+            <div class="text-center">
+              <img
+                src="../../../assets/icons/register-pet.svg"
+                alt="pets"
+                width="30%"
+              />
+            </div>
+            <h5 class="card-title text-center">Administración categorias</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

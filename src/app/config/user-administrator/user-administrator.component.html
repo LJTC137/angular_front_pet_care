@@ -1,0 +1,91 @@
+<div class="container-fluid my-5">
+  <div class="row">
+    <!-- En esta columna se llama al sidebar que esta en shared -->
+    <div class="col-md-2">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-10 main-content justify-content-center text-center">
+      <h2 class="text-center mb-4">Admisión de usuarios</h2>
+      <div class="table-responsive">
+        <table class="table table1">
+          <thead>
+            <h3 class="text-start p-2">Usuarios</h3>
+            <tr>
+              <th class="table1">Identificación</th>
+              <th class="table1">Nombre</th>
+              <th class="table1">Correo</th>
+              <th class="table1">Número de telefono</th>
+              <th class="table1">Fecha de registro</th>
+              <th class="table1">Estado</th>
+              <th class="table1">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let usuario of usuariosList; let i = index">
+              <td class="align-middle">
+                {{ usuario.identificacion }}
+              </td>
+              <td class="align-middle">
+                {{ usuario.nombre + " " + usuario.apellido }}
+              </td>
+              <td class="align-middle">
+                {{ usuario.correo }}
+              </td>
+              <td class="align-middle">
+                {{ usuario.telefono }}
+              </td>
+              <td class="align-middle">
+                {{ usuario.fechaRegistro | customDate }}
+              </td>
+              <td class="align-middle">
+                {{ usuario.esAceptado ? "Aceptado" : "Sin aceptar" }}
+                <hr />
+                {{ usuario.estado ? "Activo" : "Inactivo" }}
+              </td>
+              <td class="align-middle">
+                <div class="row">
+                  <div class="col" *ngIf="usuario.esAceptado == true">
+                    <button
+                      type="button"
+                      class="btn btn-outline-warning"
+                      (click)="denegarUsuario(usuario)"
+                    >
+                      Denegar usuario
+                    </button>
+                  </div>
+                  <div class="col" *ngIf="usuario.esAceptado == false">
+                    <button
+                      type="button"
+                      class="btn btn-outline-warning"
+                      (click)="aceptarUsuario(usuario)"
+                    >
+                      Aceptar usuario
+                    </button>
+                  </div>
+                  <div class="col" *ngIf="usuario.estado == true">
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      (click)="deshabilitarUsuario(usuario)"
+                    >
+                      Deshabilitar Usuario
+                    </button>
+                  </div>
+                  <div class="col" *ngIf="usuario.estado == false">
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      (click)="habilitarUsuario(usuario)"
+                    >
+                      Habilitar usuario
+                    </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

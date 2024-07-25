@@ -1,0 +1,198 @@
+.container-fluid {
+    background-color: #F19A56;
+}
+
+.dog img{
+    background-color: #F19A56;
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.carrusel {
+    display: flex;
+    width: 100%; 
+    padding: 45px;
+    position: relative;
+    overflow-x: auto;
+    background-color: #F19A56;
+}
+
+.carrusel img {
+    width: 300px; 
+    object-fit: cover;
+    transition: width 0.5s ease; 
+    padding: 6px;
+    border-radius: 20px;
+    border: 1px solid white;
+     
+}
+.carrusel img:hover {
+    cursor: crosshair;
+    width: 350px; 
+    filter: grayscale(100%); 
+    opacity: 0.8; 
+}
+.carrusel-item {
+    position: relative; 
+    margin-right: 10px;
+    
+}
+
+.image-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(0, 255, 102, 0.8); 
+    font-size: 20px;
+    border-radius: 5px;
+    display: none; 
+}
+.carrusel-item:hover .image-text {
+    display: block; 
+}
+
+.about {
+    background-color: #ffffff;
+    border-radius: 70px;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
+}
+
+.offer {
+    background-color:#ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
+}
+.offer-text button{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.offer-text button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(4, 112, 122);
+}
+.offer-image img {
+    max-width: 100em; 
+    max-height: 30em; 
+    width: auto; 
+    height: auto; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    margin-right: 400px;
+    margin-bottom: 70px;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .offer-text {
+        font-size: 10px; /* Reduce el tamaño de fuente */
+        padding: 10px; /* Reduce el padding */
+        margin: 15px; /* Ajusta el margen */
+
+    }
+
+  
+
+    .offer-image img {
+        max-height: 20em; /* Reduce la altura máxima de las imágenes */
+    }
+}
+
+@media (max-width: 480px) {
+    .offer-text {
+        font-size: 12px; /* Reduce aún más el tamaño de fuente */
+        padding: 10px; /* Reduce aún más el padding */
+        margin: 10px; /* Ajusta el margen */
+        width: 280px;
+    }
+    
+
+    .hero{
+        padding: 40px;
+        margin: -40PX;
+        background-color: #fff;
+    }
+
+    .carrusel {
+        display: flex;
+        flex-wrap: wrap; 
+        padding: 0px;
+        width: 351px;
+        height: auto;
+        background-color: #fff;
+    }
+    .services {
+        padding: 5px;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 90%; /* Ajusta el ancho de las tarjetas */
+        margin: 10px 0; /* Añade margen superior e inferior */
+    }
+
+    .card img {
+        width: 50px; /* Ajusta el tamaño de la imagen */
+    }
+
+    .card-text {
+        font-size: 12px; /* Ajusta el tamaño de la fuente del texto */
+    }
+  
+    .offer-image img {
+        max-height: 15em; /* Reduce aún más la altura máxima de las imágenes */
+    }
+}
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #F19A56;
+}
+.container{
+    display: flex;
+}
+.card {
+    border-radius: 20px;
+    margin-left: 10px;
+    height: 200px;
+    background-color: #fff;
+    flex: 1;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+.card:hover{
+    flex: 2;
+    background-color: rgb(207, 207, 207);
+}
+.title{
+    background-color: #F19A56;
+}
+.card img {
+    width: 80px; 
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover; 
+    
+}
+.card-text {
+    text-align: center; 
+    font-size: 16px;
+    margin-top: 10px; 
+    background-color: #F19A56;
+}
+
+.btn{
+    background-color: #F19A56;
+    color: black;
+    border-radius: 20px;
+}

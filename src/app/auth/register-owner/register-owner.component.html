@@ -1,0 +1,96 @@
+<div class="container-fluid my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="card p-5">
+        <h2 class="text-center mb-4">Formulario de Registro Propietario</h2>
+        <form>
+          <div class="row mb-3 justify-content-center">
+            <div class="col-md-6 col-lg-5 m-2">
+              <label for="nombre" class="form-label">Nombres</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                [(ngModel)]="registroPropietario.nombre"
+                placeholder="Ejem: Carlos Andres"
+                required
+              />
+            </div>
+            <div class="col-md-6 col-lg-5 m-2">
+              <label for="apellido" class="form-label">Apellidos</label>
+              <input
+                type="text"
+                class="form-control"
+                id="apellido"
+                name="apellido"
+                [(ngModel)]="registroPropietario.apellido"
+                placeholder="Ejem: Andrade Marin"
+                required
+              />
+            </div>
+            <div class="col-md-6 col-lg-5 m-2">
+              <label for="correo" class="form-label">Correo Electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="correo"
+                name="correo"
+                [(ngModel)]="registroPropietario.correo"
+                placeholder="example@example.com"
+                required
+              />
+            </div>
+            <div class="col-md-6 col-lg-5 m-2">
+              <label for="contrasenia" class="form-label">Contraseña</label>
+              <input
+                type="password"
+                class="form-control"
+                id="contrasenia"
+                name="contrasenia"
+                [(ngModel)]="registroPropietario.contrasenia"
+                required
+              />
+            </div>
+            <div class="col-md-6 col-lg-5 m-2">
+              <label for="identificacion" class="form-label"
+                >Identificación</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="identificacion"
+                name="identificacion"
+                [(ngModel)]="registroPropietario.identificacion"
+                placeholder="1700000000"
+                required
+              />
+            </div>
+
+            <div class="col-md-6 col-lg-5 m-2">
+              <label for="telefono" class="form-label">Telefono</label>
+              <input
+                type="text"
+                class="form-control"
+                id="telefono"
+                name="telefono"
+                [(ngModel)]="registroPropietario.telefono"
+                placeholder="Ejem: 0999999999"
+                required
+              />
+            </div>
+            <div class="text-center mt-3">
+              <button
+                type="submit"
+                class="btn px-5"
+                (click)="registrarPropietario()"
+              >
+                Registrarse
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

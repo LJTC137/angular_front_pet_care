@@ -1,0 +1,53 @@
+/* Estilos para el contenido principal */
+.main-content {
+    padding: 20px;
+}
+
+/* Estilos para el título de "Tus Mascotas" */
+.col-md-10.main-content h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón de "Registrar Mascota" */
+.boton-registrar-mascota {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #F19A56;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-registrar-mascota:hover {
+    background-color: #f7c095;
+}
+
+/* Estilos para la tabla de mascotas */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #FCA04B4D;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}

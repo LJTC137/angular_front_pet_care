@@ -1,0 +1,100 @@
+<div class="container-fluid mt-2 mb-5">
+  <div class="row justify-content-center">
+    <h1 class="text-center mt-2">DogoFresh</h1>
+  </div>
+
+  <div class="row justify-content-center mt-2 mb-4">
+    <div class="dog text-center py-4">
+      <img src="../../../assets/images/home/home1.jpg" alt="Dog with a leash" width="80%">
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <h3 class="text-center">¡Bienvenido a DogoFresh!</h3>
+    <h3 class="text-center">"Donde tu mascota es el centro de nuestro universo"</h3>
+    <div class="col-10 col-md-10 col-lg-8">
+      <div class="about m-2 p-4">
+        <p class="text-center">"En DogoFresh, nos enorgullece ser tu socio de confianza en el bienestar integral de tus
+          fieles amigos peludos. Nuestro equipo de expertos apasionados se dedica con esmero a brindar soluciones a
+          medida que superan tus expectativas y garantizan la salud, felicidad y calidad de vida de tus compañeros de
+          cuatro patas"</p>
+      </div>
+    </div>
+  </div>
+  <hr class="my-3 d-md-none" />
+
+  <section class="carrusel justify-content-center text-center my-3">
+    <div class="carrusel-item">
+      <img src="../../../assets/images/home/carrusel1.avif" class="d-block w-100" alt="Image 1">
+      <div class="image-text"><strong>Alojamiento de perros</strong> <br>Hogar lejos de casa para tu amigo.</div>
+    </div>
+    <div class="carrusel-item">
+      <img src="../../../assets/images/home/carrusel2.avif" class="d-block w-100" alt="Image 2">
+      <div class="image-text"><strong>Paseo de perros</strong><br> Ejercicio y diversión garantizados.</div>
+    </div>
+    <div class="carrusel-item">
+      <img src="../../../assets/images/home/carrusel3.jpg" class="d-block w-100" alt="Image 3">
+      <div class="image-text"><strong>Cuidado de perros</strong><br>Bienestar y atención integral.</div>
+    </div>
+    <div class="carrusel-item">
+      <img src="../../../assets/images/home/carrusel4.jpg" class="d-block w-100" alt="Image 4">
+      <div class="image-text"><strong>Paseadores expertos </strong> <br>Guía segura y amorosa para tu perro.</div>
+    </div>
+  </section>
+
+  <div class="row justify-content-center mt-2">
+    <h2 class="text-center mb-4">"El cuidado de tus mascotas es nuestra prioridad"</h2>
+    <div class="col-10 col-md-4 col-lg-4 text-end mt-5">
+      <div class="offer p-4">
+        <p class="text-center">"Donde tu mascota es el centro de nuestro universo: un equipo de expertos apasionados que
+          se dedican con esmero a mejorar la calidad de vida de tus compañeros, ofreciendo servicios personalizados que
+          superan tus expectativas"</p>
+        <div class="text-center">
+          <button
+          type="submit" class="btn "
+          [routerLink]="['/home', 'services']"
+        >
+        ¡Descubre nuestros servicios!
+        </button>
+        </div>
+      </div>
+    </div>
+    <hr class="my-3 d-md-none" />
+
+    <div class="col-10 col-md-6 col-lg-4 text-center">
+      <img src="../../../assets/images/home/ofertas.jpg" alt="Dog walkers" width="90%">
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-5">
+    <h2 class="text-center">¡Nuestras Propuestas de Atención!</h2>
+    <section class="services">
+      <div class="container">
+        <div class="card">
+          <img src="../../../assets/images/home/alojamiento-de-mascotas.png" alt="Alojamiento de mascotas">
+          Alojamiento de mascotas
+        </div>
+        <div class="card">
+          <img src="../../../assets/images/home/entrega-a-domicilio.png" alt="Cuidado a domicilio">
+          Cuidado a domicilio
+        </div>
+        <div class="card">
+          <img src="../../../assets/images/home/juguete-para-mascotas.png" alt="Visitas a domicilio">
+          Visitas a domicilio
+        </div>
+        <div class="card">
+          <img src="../../../assets/images/home/hogar.png" alt="Guarderia de día">
+          Guardería de día
+        </div>
+        <div class="card">
+          <img src="../../../assets/images/home/pasea-a-la-mascota.png" alt="Paseo de perros">
+          Paseo de perros
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- Aqui se llama el footer -->
+<app-footer></app-footer>

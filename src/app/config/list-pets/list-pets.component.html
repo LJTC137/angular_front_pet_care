@@ -1,0 +1,53 @@
+<div class="container-fluid mt-5">
+  <div class="row">
+    <!-- En esta columna se llama al sidebar que esta en shared -->
+    <div class="col-md-2">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="col-md-10 main-content">
+      <h1 class="text-start">Tus Mascotas</h1>
+      <div class="text-end">
+        <button
+          type="button"
+          class="btn btn-primary boton-registrar-mascota justify-content-end mb-3"
+        >
+          Registrar Mascota
+        </button>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <h4 class="text-start p-1">Tus Mascotas</h4>
+        </thead>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Tipo</th>
+            <th>Alergias</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mascota of mascotasList; let i = index">
+            <td>{{ mascota.nombre }}</td>
+            <td>{{ mascota.edad + " años" }}</td>
+            <td>{{ mascota.tipoMascota.valor }}</td>
+            <td>{{ mascota.alergias }}</td>
+            <td>
+              <div class="row">
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger"
+                    (click)="deleteMascota(i, mascota)"
+                  > Eliminar mascota </button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

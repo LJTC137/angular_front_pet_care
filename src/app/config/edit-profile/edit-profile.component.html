@@ -1,0 +1,72 @@
+<div class="container-fluid mt-5">
+  <div class="row">
+    <!-- En esta columna se llama al sidebar que esta en shared -->
+    <div class="col-md-2">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-10 main-content">
+      <div class="form-container">
+        <h2>Editar Perfil</h2>
+        <form>
+          <div class="form-group">
+            <label for="nombre">Nombres</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              [(ngModel)]="usuario.nombre"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellidos</label>
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              [(ngModel)]="usuario.apellido"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              [(ngModel)]="usuario.correo"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Identificación</label>
+            <input
+              type="text"
+              id="identificacion"
+              name="identificacion"
+              [(ngModel)]="usuario.identificacion"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input
+              type="text"
+              id="telefono"
+              name="telefono"
+              [(ngModel)]="usuario.telefono"
+              required
+            />
+          </div>
+          <div class="text-center">
+            <button class="btn px-5" type="button" (click)="updateUsuario()">
+              Guardar Cambios
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

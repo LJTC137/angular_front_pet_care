@@ -1,0 +1,28 @@
+/* Estilos para la sección del perfil */
+.profile-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Estilos para la información del usuario */
+.user-info h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.user-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.user-info p strong {
+    color: #333;
+}

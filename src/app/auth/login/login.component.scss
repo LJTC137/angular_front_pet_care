@@ -1,0 +1,38 @@
+.image{
+    background-color: #F19A56;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;  
+    transition: transform 0.3s, box-shadow 0.3s; 
+    border: solid 1px #ec7519;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
+}
+
+.image img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.photo{
+    border-radius: 70px;
+}
+
+.login {
+    background-color: rgba(87, 58, 15, 0.1); 
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border: solid 1px rgb(206, 163, 128);
+    backdrop-filter: blur(20px); 
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.container-fluid{
+    //background-color: #E1C2A8;
+    background-color: #f1ece7;
+    box-shadow: 0 0 20px rgba(255, 138, 20); 
+    border-radius: 40px;
+    max-width: 90%;
+}
+
+.btn{
+    background-color: #F19A56;
+}

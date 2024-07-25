@@ -1,0 +1,33 @@
+<div class="container-fluid mt-5">
+  <div class="row">
+    <!-- En esta columna se llama al sidebar que esta en shared -->
+    <div class="col-md-2">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="col-md-10 text-center">
+      <h1>Perfil</h1>
+      <div class="profile-section text-center">
+        <img
+          src="../../../assets/icons/profile-config.svg"
+          alt="Foto de Perfil"
+          class="profile-img mx-auto d-block"
+          width="30%"
+        />
+        <div class="user-info mt-3">
+          <h2>{{ usuario.nombre + " " + usuario.apellido }}</h2>
+          <p class="fw-semibold">{{ usuario.correo }}</p>
+          <p class="fw-semibold">{{ usuario.identificacion }}</p>
+          <p class="fw-semibold">{{ usuario.fechaRegistro | customDate }}</p>
+          <p class="fw-semibold">{{ usuario.telefono }}</p>
+          <button
+            class="btn btn-primary"
+            [routerLink]="['/config', 'editProfile']"
+          >
+            Editar perfil
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

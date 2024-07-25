@@ -1,0 +1,25 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #F19A56;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card{
+    border: solid 1px #ec7519;
+    border-radius: 20px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn{
+    border-radius: 20px;
+    background-color: #F19A56;
+}
